@@ -18,7 +18,7 @@ document.addEventListener('click',function(e){
         }
     }else{
         if (!menu_panel.contains(e.target)) {
-            var tl = gsap.timeline();
+            const tl = gsap.timeline();
             tl.to(menu_list,{
                 duration:0.5,
                 y:"100%",
@@ -71,8 +71,15 @@ burger_menu.addEventListener('click',function(){
 })
 
 close_icon.addEventListener('click',function(){
-    gsap.to(menu_list,{
+    const tl = gsap.timeline();
+    tl.to(menu_list,{
         duration:0.5,
         y:"100%",
+    })
+    tl.to(menu_list,{
+        duration:0,
+        width:"100vw",
+        paddingLeft:'20px',
+        ease:'ease-in'
     })
 })
