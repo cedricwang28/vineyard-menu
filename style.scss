@@ -1,0 +1,115 @@
+$bg-color: #0d1b2a;
+$text-color: #fff;
+$menu-hover:#1b263b;
+$wine-color: #6a040f;
+$mobile-menu-height:80px;
+
+.menu-panel{
+    width: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: sans-serif;
+    .burger-menu{
+        i{
+            cursor: pointer;
+        }
+    }
+    .mobile-only{
+        display: none;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+    }
+    .menu-list{
+        list-style: none;
+        padding:0;
+        li{
+            height: 36px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                background: $menu-hover;
+                cursor: pointer;
+            }
+        }
+        .close-icon{
+            position: absolute;
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .menu-panel {
+      .menu-list{
+        position: absolute;
+        bottom: 100%;
+        height: calc(100vh - $mobile-menu-height);
+        left: 0;
+        right: 0;
+        background-color: $bg-color;
+        margin: 0;
+        display: flex;
+        transform: translateY(100%);
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+        z-index: -100;
+        .close-icon{
+            display: block;
+            top:26px;
+            right: 35px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+      }
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      justify-content: space-around;
+      left: 0;
+      width: 100vw;
+      bottom: 0;
+      height: $mobile-menu-height;
+      top: auto;
+      margin: 0;
+      .mobile-only{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .non-mobile{
+        display: none;
+      }
+      .logo{
+        height: auto;
+      }
+      .cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cart-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 12px;
+            padding:5px 10px;
+            font-size: 12px;
+            font-weight: 200;
+            background-color: $wine-color;
+            border-radius: 20px;
+            i{
+                margin-right: 5px;
+            }
+        }
+      }
+    }
+  }

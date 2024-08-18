@@ -1,0 +1,108 @@
+.menu-panel {
+  width: 120px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0d1b2a;
+  color: #fff;
+  font-family: sans-serif;
+}
+.menu-panel .burger-menu i {
+  cursor: pointer;
+}
+.menu-panel .mobile-only {
+  display: none;
+}
+.menu-panel .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+.menu-panel .menu-list {
+  list-style: none;
+  padding: 0;
+}
+.menu-panel .menu-list li {
+  height: 36px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.menu-panel .menu-list li:hover {
+  background: #1b263b;
+  cursor: pointer;
+}
+.menu-panel .menu-list .close-icon {
+  position: absolute;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .menu-panel {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-around;
+    left: 0;
+    width: 100vw;
+    bottom: 0;
+    height: 80px;
+    top: auto;
+    margin: 0;
+  }
+  .menu-panel .menu-list {
+    position: absolute;
+    bottom: 100%;
+    height: calc(100vh - 80px);
+    left: 0;
+    right: 0;
+    background-color: #0d1b2a;
+    margin: 0;
+    display: flex;
+    transform: translateY(100%);
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    z-index: -100;
+  }
+  .menu-panel .menu-list .close-icon {
+    display: block;
+    top: 26px;
+    right: 35px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .menu-panel .mobile-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-panel .non-mobile {
+    display: none;
+  }
+  .menu-panel .logo {
+    height: auto;
+  }
+  .menu-panel .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-panel .cart .cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 200;
+    background-color: #6a040f;
+    border-radius: 20px;
+  }
+  .menu-panel .cart .cart-btn i {
+    margin-right: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
